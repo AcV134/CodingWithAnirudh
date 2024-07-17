@@ -87,6 +87,16 @@ body::-webkit-scrollbar-thumb {
     color: #F92C85;
 }
 
+footer{
+    border-top: 2px solid #F92C85;
+    border-radius: 20px;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+
+
 
 
 
