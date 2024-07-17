@@ -2,7 +2,6 @@
     font-size: 16px;
     font-family:"Nunito Sans";
     color: #5EBEC4;
-
 }
 
 body{
@@ -75,7 +74,18 @@ body::-webkit-scrollbar-thumb {
     background: #F92C85;
 }
 
+.icon-link{
+    text-decoration: none;
+}
 
+.footer-link{
+    text-decoration: none;
+    color: #5EBEC4;
+}
+
+.footer-hover{
+    color: #F92C85;
+}
 
 
 
