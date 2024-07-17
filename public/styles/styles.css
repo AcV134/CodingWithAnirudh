@@ -25,7 +25,7 @@ header{
     font-family: "Playwrite HU";
     list-style-type: none; 
     padding: 0;             
-    margin: 0 60px 0 0;              
+    margin: 0 60px 0 5px;              
     display: flex;
     align-items: center;   
     justify-content: right;     
@@ -55,7 +55,7 @@ header{
 .item-hover{
     background-color: #F92C85;
     border:3px solid #F92C85;
-    box-shadow:   10px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow:    10px 10px rgba(0, 0, 0, 0.2);
 }
 
 main{
