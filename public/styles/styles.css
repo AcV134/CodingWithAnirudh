@@ -13,7 +13,7 @@ body{
 
 .navbar {
     height: 5rem;       
-    width: 100vw;   
+    width: 98vw;   
     top:0px;   
     position: fixed;
 }
@@ -25,7 +25,10 @@ body{
     margin: 0;              
     display: flex;
     align-items: center;   
-    justify-content: right;         
+    justify-content: right;     
+    background-color: #FDF5DF;
+    border-bottom: 2px solid #F92C85;
+    border-radius: 20px;
 }
 
 .nav-item:first-child {
@@ -44,14 +47,14 @@ body{
     color: #5EBEC4;
 }
 
-.nav-link:hover{
+.link-hover{
     color: #FDF5DF;
 }
 
-.nav-item:hover{
+.item-hover{
     background-color: #F92C85;
     border:3px solid #F92C85;
-    color: #FDF5DF;
+    box-shadow:   10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 main{
