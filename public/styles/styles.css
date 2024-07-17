@@ -41,11 +41,13 @@ header{
     border-radius: 50px;
     border:3px solid #FDF5DF;
     margin: 0.5rem;
+    transition: all 0.3s;
 }
 
 .nav-link{
     text-decoration: none;
     color: #5EBEC4;
+    transition: all 0.3s;
 }
 
 .link-hover{
@@ -81,6 +83,7 @@ body::-webkit-scrollbar-thumb {
     text-decoration: none;
     color: #5EBEC4;
     padding: 0.5rem;
+    transition: all 0.3s;
 }
 
 .footer-hover{
@@ -125,6 +128,7 @@ footer{
 
   .fg-primary{
     color: #5EBEC4;
+    transition: all 0.2s;
   }
 
   .fg-secondary{
