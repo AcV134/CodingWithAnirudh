@@ -10,24 +10,26 @@ body{
     padding: 0px;
 }
 
-.navbar {
-    height: 5rem;       
-    width: 98vw;   
-    top:0px;   
-    position: fixed;
+header{
+    border-bottom: 2px solid #F92C85;
+    border-radius: 20px;
+    background-color: #FDF5DF;
+    padding: 0.2rem;
+    width: 100%;
+    margin:0px;
+    position:fixed;
+    top:0px;    
 }
 
 .navbar-nav {
     font-family: "Playwrite HU";
     list-style-type: none; 
     padding: 0;             
-    margin: 0;              
+    margin: 0 60px 0 0;              
     display: flex;
     align-items: center;   
     justify-content: right;     
     background-color: #FDF5DF;
-    border-bottom: 2px solid #F92C85;
-    border-radius: 20px;
 }
 
 .nav-item:first-child {
