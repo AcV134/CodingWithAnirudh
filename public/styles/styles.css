@@ -10,6 +10,15 @@ body{
     padding: 0px;
 }
 
+h1{
+    font-family: "Playwrite HU";
+    font-size: 3rem;
+    color: #F92C85;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
 header{
     border-bottom: 2px solid #F92C85;
     border-radius: 20px;
@@ -127,12 +136,11 @@ footer{
   }
 
   .fg-primary{
-    color: #5EBEC4;
+    fill: #5EBEC4;
     transition: all 0.2s;
-  }
-
-  .fg-secondary{
-    color: #F92C85;
+    stroke: #F92C85;
+    stroke-width: 7px;
+    /* filter: drop-shadow(10px 10px 10px rgb(0, 0, 0, 0.2)); */
   }
   
 
