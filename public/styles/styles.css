@@ -2,6 +2,7 @@
     font-size: 16px;
     font-family:"Nunito Sans";
     color: #5EBEC4;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -21,7 +22,8 @@ h1{
 
 header{
     border-bottom: 2px solid #F92C85;
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     background-color: #FDF5DF;
     padding: 0.2rem;
     width: 100%;
@@ -70,8 +72,8 @@ header{
 }
 
 main{
-    margin-top: 2rem;
-    padding: 3rem;
+    margin-top: 5rem;
+    /* padding: 3rem; */
 }
 
 
@@ -141,6 +143,13 @@ footer{
     stroke: #F92C85;
     stroke-width: 7px;
     /* filter: drop-shadow(10px 10px 10px rgb(0, 0, 0, 0.2)); */
+  }
+
+  .page{
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #F92C85;
+    width:100%;
   }
   
 
