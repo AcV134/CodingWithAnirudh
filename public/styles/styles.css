@@ -150,6 +150,7 @@ footer{
     background-color: #FFFFFF;
     border-bottom: 2px solid #F92C85;
     width:100%;
+    scroll-margin-top: 5rem; 
   }
   
 
