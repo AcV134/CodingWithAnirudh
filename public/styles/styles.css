@@ -1,21 +1,25 @@
 :root{
     font-size: 16px;
-    font-family:"Nunito Sans";
-    color: #5EBEC4;
+    font-family: 'Prompt', sans-serif;
+    color: #ffff;
     scroll-behavior: smooth;
 }
 
 body{
-    background-color: #FDF5DF;
+    background-color: #202731;
     margin: 0px;
     padding: 0px;
 }
 
 h1{
-    font-family: "Playwrite HU";
+    /* font-family: "Playwrite HU"; */
     font-size: 3rem;
-    color: #F92C85;
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+p{
     margin: 0;
     padding: 0;
 }
@@ -24,38 +28,44 @@ header{
     border-bottom: 2px solid #F92C85;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: #FDF5DF;
+    background-color: #202731;
     padding: 0.2rem;
     width: 100%;
     margin:0px;
     position:fixed;
     top:0px;    
+    z-index: 1000;
 }
 
 .navbar-nav {
-    font-family: "Playwrite HU";
+    /* font-family: "Playwrite HU";     */
     list-style-type: none; 
     padding: 0;             
     margin: 0 60px 0 5px;              
     display: flex;
     align-items: center;   
     justify-content: right;     
-    background-color: #FDF5DF;
+    /* background-color: #FDF5DF; */
 }
 
 .nav-item:first-child {
     margin-right: auto;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
 }
 
 .nav-item{
+    position: relative;
     padding: 0.3rem;
     border-radius: 50px;
-    border:3px solid #FDF5DF;
+    border:3px solid #202731;
     margin: 0.5rem;
     transition: all 0.3s;
 }
 
 .nav-link{
+    display: block;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     color: #5EBEC4;
     transition: all 0.3s;
@@ -68,14 +78,17 @@ header{
 .item-hover{
     background-color: #F92C85;
     border:3px solid #F92C85;
-    box-shadow:    10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow:    10px 10px #5EBEC4;
 }
 
 main{
-    margin-top: 5rem;
+    margin-top: 3.5rem;
     /* padding: 3rem; */
 }
 
+body::-webkit-scrollbar-track {
+    background: #202731;
+}
 
 body::-webkit-scrollbar {
     width: 0.5rem;
@@ -108,6 +121,7 @@ footer{
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
+    background-color: #202731;
 }
 
 .foot{
@@ -147,12 +161,37 @@ footer{
 
   .page{
     min-height: 100vh;
-    background-color: #FFFFFF;
-    border-bottom: 2px solid #F92C85;
-    width:100%;
-    scroll-margin-top: 5rem; 
+    /* border-bottom: 2px solid #F92C85; */
+    scroll-margin-top: 5rrem; 
+    padding: 5rem;
+    /* opacity: 0;
+    transition: opacity 1s ease-out, transform 0.5s ease-out; */
   }
   
+  .page.fade-in {
+    opacity: 1;
+}
+
+#title{
+    background-color: #3c31dd;
+    padding-top: 0%;
+    
+}
+
+#about{
+    background-color: #202731;
+
+}
+
+#blog{
+    background-color: #dd3f31;
+
+}
+
+#projects{
+    background-color: #0f0f10;
+
+}
 
 
 
