@@ -1,24 +1,15 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     const sections = document.querySelectorAll('.page');
+console.log("loaded page.js");
 
-//     const observerOptions = {
-//         root: null,
-//         rootMargin: '0px',
-//         threshold: 0.1
-//     };
+const tween = KUTE.fromTo(
+    "#blob3",
+    { path: "#blob3" },
+    { path: "#blob4" },
+    { repeat: 999, duration: 4000, yoyo: true, easing: "easingCubicInOut" }
+).start();
 
-//     const observerCallback = (entries, observer) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 entry.target.classList.add('fade-in');
-//                 observer.unobserve(entry.target); // Optional: Unobserve after the first fade-in
-//             }
-//         });
-//     };
-
-//     const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-//     sections.forEach(section => {
-//         observer.observe(section);
-//     });
-// });
+const mean = KUTE.fromTo(
+    "#blob1",
+    { path: "#blob1" },
+    { path: "#blob2" },
+    { repeat: 999, duration: 3000, yoyo: true, easing: "easingCubicInOut" }
+).start();

@@ -11,7 +11,6 @@ body{
 }
 
 h1{
-    /* font-family: "Playwrite HU"; */
     font-size: 3rem;
     text-align: center;
     margin: 0;
@@ -160,12 +159,13 @@ footer{
   }
 
   .page{
-    display: block;
     min-height: 100vh;
     position: relative;
     scroll-margin-top: 4rem; 
     padding: 5rem;
     padding-top: 7rem;
+    /* align-items: center;
+    justify-content: center; */
   }
   
   .page.fade-in {
@@ -173,9 +173,8 @@ footer{
 }
 
 #first{
-    /* background-color: #3c31dd; */
-    /* padding-top: 0%; */
     background-color: #fff;
+    color:black;
     
 }
 
@@ -247,7 +246,17 @@ footer{
     height: 25rem;
 }
 
+.blob-motion {
+    position: relative;
+    transform: translateY(-40%);
+    z-index: 0;
+  }
 
+  .blob-content {
+    position: relative;
+    transform: translateY(90%);
+    z-index: 1;
+  }
 
 
 
