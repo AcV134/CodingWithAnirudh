@@ -6,7 +6,6 @@
 }
 
 body{
-    background-color: #202731;
     margin: 0px;
     padding: 0px;
 }
@@ -116,7 +115,8 @@ body::-webkit-scrollbar-thumb {
 
 footer{
     border-top: 2px solid #F92C85;
-    border-radius: 20px;
+    /* border-top-right-radius: 20px;
+    border-top-left-radius: 20px; */
     padding: 2rem;
     padding-bottom: 0;
     display: flex;
@@ -160,43 +160,92 @@ footer{
   }
 
   .page{
+    display: block;
     min-height: 100vh;
-    /* border-bottom: 2px solid #F92C85; */
+    position: relative;
     scroll-margin-top: 4rem; 
     padding: 5rem;
-    /* opacity: 0;
-    transition: opacity 1s ease-out, transform 0.5s ease-out; */
+    padding-top: 7rem;
   }
   
   .page.fade-in {
     opacity: 1;
 }
 
-#title{
-    background-color: #3c31dd;
-    padding-top: 0%;
+#first{
+    /* background-color: #3c31dd; */
+    /* padding-top: 0%; */
+    background-color: #fff;
     
 }
 
-#about{
-    background-color: #202731;
+#second{
+    background: linear-gradient(90deg, #ff0095, #ff9400);
+    background-size: 200% 200%;
+    animation: gradient-animation 5s ease infinite;
 
 }
 
-#blog{
-    background-color: #dd3f31;
+#third{
+    background-color: #010000;
+
 
 }
 
-#projects{
-    background-color: #0f0f10;
+#fourth{
+    background: linear-gradient(90deg, #2c00ff, #7000ff);
+    background-size: 200% 200%;
+    animation: gradient-animation 5s ease infinite;
+}
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
 
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(119% + 1.3px);
+    height: 76px;
+}
 
+.wave .shape-fill {
+    fill: #FFFFFF;
+}
 
+.wave2{
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
 
-
+.wave2 svg{
+    position: relative;
+    display: block;
+    width: calc(119% + 1.3px);
+    height: 25rem;
+}
 
 
 
