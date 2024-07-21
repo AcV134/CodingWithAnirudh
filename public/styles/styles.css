@@ -162,7 +162,7 @@ footer{
   .page{
     min-height: 100vh;
     /* border-bottom: 2px solid #F92C85; */
-    scroll-margin-top: 5rrem; 
+    scroll-margin-top: 4rem; 
     padding: 5rem;
     /* opacity: 0;
     transition: opacity 1s ease-out, transform 0.5s ease-out; */
