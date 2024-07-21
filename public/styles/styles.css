@@ -164,8 +164,6 @@ footer{
     scroll-margin-top: 4rem; 
     padding: 5rem;
     padding-top: 7rem;
-    /* align-items: center;
-    justify-content: center; */
   }
   
   .page.fade-in {
@@ -187,7 +185,6 @@ footer{
 
 #third{
     background-color: #010000;
-
 
 }
 
@@ -254,7 +251,7 @@ footer{
 
   .blob-content {
     position: relative;
-    transform: translateY(90%);
+    transform: translateY(100%);
     z-index: 1;
   }
 
