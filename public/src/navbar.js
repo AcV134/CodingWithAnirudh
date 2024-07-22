@@ -23,7 +23,8 @@ $("document").ready(()=>{$(".nav-item").hover((e)=>{
     $(e.target).closest('li').find('.nav-link').removeClass('link-hover');
 })});
 
-$("document").ready(()=>{$(".nav-item").click((e)=>{
+$("document").ready(()=>{
+    $(".nav-item").click((e)=>{
     e.preventDefault();
     window.location.href = $(e.target).closest('li').find('.nav-link').attr('href');
 })});
