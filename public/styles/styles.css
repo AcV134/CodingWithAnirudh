@@ -292,6 +292,7 @@ footer{
     border-radius: 20px;
     padding:1.5rem;
     box-shadow:-1rem 0 3rem #000;
+    transition: all 300ms ease;
 }
 
 .cards:not(:first-child){
@@ -308,8 +309,54 @@ footer{
     border:2px solid #ff0095;
 }
 
+/* projects */
+
+.project-container{
+    display: flex;
+    position: relative;
+    overflow-x: scroll; 
+    width: 40%;
+    padding: 3rem;
+    margin-left: 25%;
+    transition: width 300ms ease;
+    transition: margin-left 300ms ease;
+}
+
+.project-container-click{
+    width:60%;
+    margin-left: 15%;
+}
+
+.project{
+    position: relative;
+    margin: 1rem;
+    display: flex;
+    height: 250px;
+    width:50px;
+    min-width: 50px;
+    background-color: #000;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px #000;
+    transition: min-width 300ms ease;
+}
 
 
+.project-click{
+    min-width:350px; 
+}
+
+.project-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.project-container::-webkit-scrollbar-thumb {
+    background: #ff0095;
+    border-radius: 20px;
+}
+
+.project-container::-webkit-scrollbar-track {
+    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+}
 
 
 
