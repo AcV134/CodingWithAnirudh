@@ -1,18 +1,4 @@
-// $(document).ready(function() {
-//     $('.navitem').hover(
-//       function() {
-//         // On mouse enter
-//         $(this).addClass('item-hover');
-//         $(this).find('.navlink').addClass('link-hover');
-//       }, function() {
-//         // On mouse leave
-//         $(this).removeClass('item-hover');
-//         $(this).find('.navlink').removeClass('link-hover');
-//       }
-//     );
-//   });
-
-console.log("reasder");
+console.log("loaded navbar.js");
 
 $("document").ready(()=>{$(".nav-item").hover((e)=>{
     console.log(e.target);

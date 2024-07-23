@@ -1,3 +1,5 @@
+console.log("loaded project.js");
+
 $(document).ready(()=>{
     $('.project').click((e)=>{
         $(e.target).siblings().removeClass('project-click');

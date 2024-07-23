@@ -1,24 +1,24 @@
-<h1 class="blob-content">Welcome to My Website</h1>
-<svg class="blob-motion" id="visual" viewBox="0 0 960 540" preserveAspectRatio="none"
-    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-    <g transform="translate(478.6725659649768 297.0692060381173)">
-        <path id="blob1"
-            d="M119.8 -126.6C153.8 -85.8 178.9 -42.9 187.3 8.4C195.6 59.6 187.3 119.3 153.3 146.3C119.3 173.3 59.6 167.6 13.9 153.7C-31.8 139.8 -63.6 117.6 -96.1 90.6C-128.6 63.6 -161.8 31.8 -177.7 -15.9C-193.6 -63.6 -192.3 -127.3 -159.8 -168.1C-127.3 -208.9 -63.6 -227 -10.4 -216.6C42.9 -206.2 85.8 -167.5 119.8 -126.6"
-            fill="#ff0095"></path>
-    </g>
-    <g transform="translate(483.69923801657177 257.35271007856136)" style="visibility:hidden">
-        <path id="blob2"
-            d="M138.3 -136.8C172 -104.7 187 -52.3 176.7 -10.3C166.5 31.8 131 63.6 97.3 108.6C63.6 153.6 31.8 211.8 -0.9 212.8C-33.7 213.7 -67.4 157.4 -100.4 112.4C-133.4 67.4 -165.7 33.7 -179.7 -14C-193.8 -61.8 -189.5 -123.5 -156.5 -155.7C-123.5 -187.8 -61.8 -190.4 -4.7 -185.7C52.3 -181 104.7 -169 138.3 -136.8"
-            fill="#ff0095"></path>
-    </g>
-    <g transform="translate(493.8037978048411 289.9830110280759)" style="visibility:hidden">
-        <path id="blob3"
-            d="M156.4 -162.3C185.6 -127.3 180.3 -63.6 175.9 -4.4C171.6 54.9 168.2 109.8 139 135.5C109.8 161.2 54.9 157.6 5.7 151.9C-43.6 146.3 -87.2 138.5 -129.4 112.9C-171.5 87.2 -212.3 43.6 -206.4 5.9C-200.5 -31.8 -148 -63.6 -105.8 -98.6C-63.6 -133.6 -31.8 -171.8 15.9 -187.7C63.6 -203.6 127.3 -197.3 156.4 -162.3"
-            fill="#ff0095"></path>
-    </g>
-    <g transform="translate(449.79075226833726 267.43486332806947)" >
-        <path id="blob4"
-            d="M163.9 -154.7C208.1 -119.7 236.5 -59.9 222.5 -14C208.5 31.8 152 63.6 107.8 107.3C63.6 151 31.8 206.5 -0.7 207.2C-33.2 207.9 -66.5 153.8 -91.3 110.1C-116.1 66.5 -132.6 33.2 -147.8 -15.2C-163 -63.6 -176.9 -127.3 -152.1 -162.3C-127.3 -197.3 -63.6 -203.6 -1.9 -201.8C59.9 -199.9 119.7 -189.7 163.9 -154.7"
-            fill="#ff0095"></path>
-    </g>
-</svg>
+ <h1 class="blob-content">Welcome to My Website</h1>
+
+<div class="blob-wrapper">
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+        </defs>
+    </svg>
+    <div class="blob-container">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+        <div class="blob b4"></div>
+        <div class="blob b5"></div>
+        <div class="blob interactive"></div>
+    </div> 
+</div>
+
+
+<script src="src/title.js"></script>

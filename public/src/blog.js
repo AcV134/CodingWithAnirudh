@@ -1,4 +1,4 @@
-console.log("blog works")
+console.log("loaded blog.js");
 
 $(document).ready(()=>{
     $(".cards").hover((e)=>{

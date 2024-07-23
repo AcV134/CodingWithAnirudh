@@ -5,6 +5,7 @@
     font-family: 'Prompt', sans-serif;
     color: #ffff;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body{
@@ -22,10 +23,6 @@ h1{
 p{
     margin: 0;
     padding: 0;
-}
-
-main{
-    margin-top: 3.5rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -117,8 +114,6 @@ header{
 
 footer{
     border-top: 2px solid #F92C85;
-    /* border-top-right-radius: 20px;
-    border-top-left-radius: 20px; */
     padding: 2rem;
     padding-bottom: 0;
     display: flex;
@@ -164,7 +159,10 @@ footer{
 
   .page{
     min-height: 100vh;
+    min-width:100wh;
     position: relative;
+    display: flex;
+    flex-direction: column;
     scroll-margin-top: 4rem; 
     padding: 5rem;
     padding-top: 7rem;
@@ -172,11 +170,116 @@ footer{
     justify-items: center;
   }
 
+/* title */
+
 #first{
-    background-color: #fff;
     color:black;
-    
+    overflow: hidden;
+    /* cursor:none; */
 }
+
+.blob-content {
+    position: relative;
+    z-index: 1;
+    margin-top: 2%;
+} 
+
+.blob-wrapper svg {
+    display: none;
+  }
+
+
+  .blob-container {
+    filter: url(#goo) blur(2px) ;
+    width: 100wh;
+    height: 100vh;
+  }
+
+.blob{
+    
+    height: 250px;
+    width: 250px;
+    background: radial-gradient(63.62% 69.52% at 100% 0%, rgba(247, 214, 98, 0.8) 0%, rgba(247, 214, 98, 0.17) 52.08%, rgba(247, 214, 98, 0) 100%), linear-gradient(208.42deg, rgb(240, 66, 42) 7.46%, rgba(240, 88, 42, 0.18) 42.58%, rgba(240, 101, 42, 0) 64.13%), radial-gradient(114.51% 122.83% at 0% -15.36%, rgb(231, 79, 106) 0%, rgba(231, 79, 106, 0.22) 66.72%, rgba(231, 79, 106, 0) 100%), linear-gradient(333.95deg, rgba(83, 208, 236, 0.85) -7.76%, rgba(83, 208, 236, 0.204) 19.67%, rgba(138, 137, 190, 0) 35.42%), radial-gradient(109.15% 148.57% at 4.46% 98.44%, rgb(27, 49, 128) 0%, rgba(27, 49, 128, 0) 100%), linear-gradient(141.57deg, rgb(78, 173, 235) 19.08%, rgba(78, 173, 235, 0) 98.72%);
+    border-radius: 7rem;
+    background-blend-mode: normal;
+    filter: blur(25px);
+    position: absolute;
+}
+
+.b1{
+    animation: moveVertical 30s ease infinite;
+}
+
+.b2{
+    animation: moveHorizontal 30s ease infinite;
+}
+
+.b3{
+    animation: moveClockwise 30s ease infinite;
+}
+
+.b4{
+    animation: moveAntiClockwise 30s ease infinite;
+
+}
+
+.interactive {
+    height: 100px;
+    width: 100px;
+    margin-left: -43rem;
+    margin-top: -15rem;
+
+  }
+
+@keyframes moveHorizontal{
+    0%{
+        transform: translateX(-100%) translateY(-10%);
+    }
+    50%{
+        transform: translateX(100%) translateY(10%);
+    }
+    100%{
+        transform:translateX(-100%)translateY(-10%);
+    }
+}
+
+@keyframes moveVertical{
+    0%{
+        transform: translateY(-100%) translateX(0%);
+    }
+    50%{
+        transform: translateY(100%) translateX(-10%);
+    }
+    100%{
+        transform:translateY(-100%)translateX(10%);
+    }
+}
+
+@keyframes moveClockwise{
+    0% { 
+        transform: rotate(0deg)  
+              translateY(50%) rotate(0deg) translateX(-100%); 
+    } 
+
+    100% { 
+        transform: rotate(360deg)  
+              translateY(50%) rotate(-360deg) translateX(-100%); 
+    } 
+}
+
+@keyframes moveAntiClockwise{
+    0% { 
+        transform: rotate(0deg)  
+              translateY(-50%) rotate(0deg) translateX(50%); 
+    } 
+
+    100% { 
+        transform: rotate(-360deg)  
+              translateY(-50%) rotate(-360deg) translateX(50%); 
+    } 
+}
+
+
 
 #second{
     background: linear-gradient(90deg, #ff0095, #ff9400);
@@ -245,18 +348,6 @@ footer{
     height: 25rem;
 }
 
-.blob-motion {
-    position: relative;
-    transform: translateY(-40%);
-    z-index: 0;
-  }
-
-.blob-content {
-    position: relative;
-    transform: translateY(100%);
-    z-index: 1;
-}
-
 /* blog */
 
 .cards-container{
@@ -265,7 +356,6 @@ footer{
     overflow-x:scroll;
     width: 70%;
     padding: 3rem;
-    margin-left: 10%;
 }
 
 .cards-container::-webkit-scrollbar {
@@ -317,14 +407,11 @@ footer{
     overflow-x: scroll; 
     width: 40%;
     padding: 3rem;
-    margin-left: 25%;
     transition: width 300ms ease;
-    transition: margin-left 300ms ease;
 }
 
 .project-container-click{
     width:60%;
-    margin-left: 15%;
 }
 
 .project{
