@@ -1,5 +1,14 @@
 console.log("loaded project.js");
 
+
+let project_container = document.getElementsByClassName('project-container');
+
+for (let i = 0; i < 8; i++) {
+    let cards = document.createElement('div');
+    cards.className = 'project';
+    project_container[0].appendChild(cards);
+}
+
 $(document).ready(()=>{
     $('.project').click((e)=>{
         $(e.target).siblings().removeClass('project-click');
@@ -10,4 +19,4 @@ $(document).ready(()=>{
         }
     }
 )
-})
+}) 
