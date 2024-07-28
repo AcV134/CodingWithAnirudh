@@ -279,7 +279,7 @@ footer{
     } 
 }
 
-
+/* about */
 
 #second{
     background: linear-gradient(90deg, #ff0095, #ff9400);
@@ -288,67 +288,12 @@ footer{
 
 }
 
+/* blog */
+
 #third{
     background-color: #010000;
 
 }
-
-#fourth{
-    background: linear-gradient(90deg, #2c00ff, #7000ff);
-    background-size: 200% 200%;
-    animation: gradient-animation 5s ease infinite;
-}
-  
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave svg {
-    position: relative;
-    display: block;
-    width: calc(119% + 1.3px);
-    height: 76px;
-}
-
-.wave .shape-fill {
-    fill: #FFFFFF;
-}
-
-.wave2{
-    position: absolute;
-    top: -2px;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave2 svg{
-    position: relative;
-    display: block;
-    width: calc(119% + 1.3px);
-    height: 25rem;
-}
-
-/* blog */
 
 .cards-container{
     display:flex;
@@ -401,6 +346,45 @@ footer{
 
 /* projects */
 
+#fourth{
+    background: linear-gradient(90deg, #2c00ff, #7000ff);
+    background-size: 200% 200%;
+    animation: gradient-animation 5s ease infinite;
+}
+  
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.totalproject{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.click{
+    display: flex;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all 300ms ease;
+    color:#FFFFFF;
+}
+
+.click-hover{
+    background-color: #ff0095;
+    box-shadow: 1px 1px 3px #000;
+}
+
 .project-container{
     display: flex;
     position: relative;
@@ -408,6 +392,7 @@ footer{
     width: 40%;
     padding: 3rem;
     transition: width 300ms ease;
+    margin: 1rem;
 }
 
 .project-container-click{
@@ -444,6 +429,49 @@ footer{
 .project-container::-webkit-scrollbar-track {
     background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
 }
+
+
+
+/* svg waves */
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(119% + 1.3px);
+    height: 76px;
+}
+
+.wave .shape-fill {
+    fill: #FFFFFF;
+}
+
+.wave2{
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave2 svg{
+    position: relative;
+    display: block;
+    width: calc(119% + 1.3px);
+    height: 25rem;
+}
+
+
 
 
 

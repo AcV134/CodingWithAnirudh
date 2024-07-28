@@ -19,4 +19,7 @@ $(document).ready(()=>{
         }
     }
 )
+    $('.click').hover((e)=>{
+        $(e.target).closest('.click').toggleClass('click-hover');
+    })
 }) 
