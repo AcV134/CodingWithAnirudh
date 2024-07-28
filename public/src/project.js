@@ -24,6 +24,8 @@ $(document).ready(()=>{
         $(e.target).closest('.click').toggleClass('click-hover');
     })
 
+
+    // on clicking next and prev
     $('.next').click((e)=>{    
         if($('.project').hasClass('project-click')===false){
             $($('.project')[0]).toggleClass('project-click');
