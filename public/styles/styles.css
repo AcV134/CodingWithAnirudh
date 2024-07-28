@@ -389,7 +389,7 @@ footer{
 .project-container{
     display: flex;
     position: relative;
-    overflow-x: scroll; 
+    overflow-x:auto; 
     width: 40%;
     padding: 3rem;
     transition: width 300ms ease;
@@ -415,7 +415,7 @@ footer{
 
 
 .project-click{
-    min-width:350px; 
+    min-width:350px;
 }
 
 .project-container::-webkit-scrollbar {
