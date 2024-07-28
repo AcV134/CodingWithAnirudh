@@ -350,6 +350,7 @@ footer{
     background: linear-gradient(90deg, #2c00ff, #7000ff);
     background-size: 200% 200%;
     animation: gradient-animation 5s ease infinite;
+    overflow-x: hidden;
 }
   
 @keyframes gradient-animation {
