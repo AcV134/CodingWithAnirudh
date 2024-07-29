@@ -36,9 +36,14 @@ $(document).ready(()=>{
             $('.project').siblings().removeClass('project-click');
             let next = current + 1;
             $('#p' + next).toggleClass('project-click');
+            $('.project-container').addClass('project-container-click');
+            if($('.project').hasClass('project-click')===false){
+                $('.project-container').removeClass('project-container-click');
+            }
         }
         else{
             $($('.project')[0]).toggleClass('project-click');
+            $('.project-container').addClass('project-container-click');
         }
     })
 
@@ -50,9 +55,14 @@ $(document).ready(()=>{
             $('.project').siblings().removeClass('project-click');
             let prev = current - 1;
             $('#p' + prev).toggleClass('project-click');
+            $('.project-container').addClass('project-container-click');
+            if($('.project').hasClass('project-click')===false){
+                $('.project-container').removeClass('project-container-click');
+            }
         }
         else{
             $($('.project')[$('.project').length-1]).toggleClass('project-click');
+            $('.project-container').addClass('project-container-click');
         }
     })
 })
