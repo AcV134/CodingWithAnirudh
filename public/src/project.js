@@ -6,6 +6,10 @@ for (let i = 0; i < 18; i++) {
     let cards = document.createElement('div');
     cards.className = `project`;
     cards.id = `p_${i}`;
+    let content =`
+    <a href="#">
+    `
+    cards.innerHTML = content;
     project_container[0].appendChild(cards);
 }
 
