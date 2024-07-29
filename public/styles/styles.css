@@ -370,6 +370,7 @@ footer{
     align-items: center;
     justify-content: center;
     padding: 3rem;
+    width:100vw;
 }
 
 .click{
@@ -388,16 +389,12 @@ footer{
 
 .project-container{
     display: flex;
-    position: relative;
     overflow-x:auto; 
-    width: 40%;
+    max-width: 20%; 
     padding: 3rem;
     transition: width 300ms ease;
     margin: 1rem;
-}
-
-.project-container-click{
-    width:60%;
+    padding-right: 250px;
 }
 
 .project{
@@ -410,7 +407,8 @@ footer{
     background-color: #000;
     border-radius: 20px;
     box-shadow: 1px 1px 3px #000;
-    transition: min-width 300ms ease;
+    transition: all 300ms ease;
+
 }
 
 

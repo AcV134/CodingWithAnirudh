@@ -2,67 +2,61 @@ console.log("loaded project.js");
 
 let project_container = document.getElementsByClassName('project-container');
 
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 18; i++) {
     let cards = document.createElement('div');
     cards.className = `project`;
-    cards.id = `p${i}`;
+    cards.id = `p_${i}`;
     project_container[0].appendChild(cards);
 }
 
-$(document).ready(()=>{
+let total = $('.project');
+let total_length = total.length;
+let current = -1;
+
+$(document).ready(() => {
     // on clicking project card
     $('.project').click((e)=>{
         $(e.target).siblings().removeClass('project-click');
-        $(e.target).closest('.project').toggleClass('project-click');
-        $(e.target).closest('.project-container').addClass('project-container-click');
-        if($(e.target).hasClass('project-click')===false){
-            $(e.target).closest('.project-container').removeClass('project-container-click');
-        }
-    }
-)
+        $(e.target).toggleClass('project-click');
+        current = $(e.target).index();
+        setTimeout(() => {
+            (e.target).scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          }, 150);
+    })
+
     // on hovering over navigation click
     $('.click').hover((e)=>{
         $(e.target).closest('.click').toggleClass('click-hover');
     })
 
-
-    // on clicking next and prev
-
+    // on clicking next and prev navigation click
     $('.next').click((e)=>{
-        if($('.project').siblings().hasClass('project-click')){
-            let id = $('.project.project-click')[0].id;
-            let id_num = id.slice(-1);
-            let current = Number(id_num);
-            $('.project').siblings().removeClass('project-click');
-            let next = current + 1;
-            $('#p' + next).toggleClass('project-click');
-            $('.project-container').addClass('project-container-click');
-            if($('.project').hasClass('project-click')===false){
-                $('.project-container').removeClass('project-container-click');
-            }
+        console.log(current);
+        current += 1;
+        if (current > total_length - 1) {
+            current = 0;
         }
-        else{
-            $($('.project')[0]).toggleClass('project-click');
-            $('.project-container').addClass('project-container-click');
-        }
+        let card = total.eq(current);
+        card.siblings().removeClass('project-click');
+        card.toggleClass('project-click');
+
+        setTimeout(() => {
+            card[0].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          }, 150);
     })
 
     $('.prev').click((e)=>{
-        if($('.project').siblings().hasClass('project-click')){
-            let id = $('.project.project-click')[0].id;
-            let id_num = id.slice(-1);
-            let current = Number(id_num);
-            $('.project').siblings().removeClass('project-click');
-            let prev = current - 1;
-            $('#p' + prev).toggleClass('project-click');
-            $('.project-container').addClass('project-container-click');
-            if($('.project').hasClass('project-click')===false){
-                $('.project-container').removeClass('project-container-click');
-            }
+        console.log(current);
+        current -= 1;
+        if (current < 0) {
+            current = total_length - 1;
         }
-        else{
-            $($('.project')[$('.project').length-1]).toggleClass('project-click');
-            $('.project-container').addClass('project-container-click');
-        }
+        let card = total.eq(current);
+        card.siblings().removeClass('project-click');
+        card.toggleClass('project-click');
+
+        setTimeout(() => {
+            card[0].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          }, 150);
     })
 })
