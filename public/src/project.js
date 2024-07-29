@@ -5,6 +5,7 @@ let project_container = document.getElementsByClassName('project-container');
 for (let i = 0; i < 8; i++) {
     let cards = document.createElement('div');
     cards.className = `project`;
+    cards.id = `p${i}`;
     project_container[0].appendChild(cards);
 }
 
@@ -26,37 +27,32 @@ $(document).ready(()=>{
 
 
     // on clicking next and prev
-    $('.next').click((e)=>{    
-        if($('.project').hasClass('project-click')===false){
-            $($('.project')[0]).toggleClass('project-click');
+
+    $('.next').click((e)=>{
+        if($('.project').siblings().hasClass('project-click')){
+            let id = $('.project.project-click')[0].id;
+            let id_num = id.slice(-1);
+            let current = Number(id_num);
+            $('.project').siblings().removeClass('project-click');
+            let next = current + 1;
+            $('#p' + next).toggleClass('project-click');
         }
         else{
-            if($($('.project.project-click')[0]).next().length ===1){
-                let current = $($('.project.project-click')[0]).next()[0];
-                $(current).siblings().removeClass('project-click');
-                $(current).toggleClass('project-click');
-            }
-            else{
-                $('.project').siblings().removeClass('project-click');
-                $($('.project')[0]).toggleClass('project-click');
-            }
+            $($('.project')[0]).toggleClass('project-click');
         }
     })
 
     $('.prev').click((e)=>{
-        if($('.project').hasClass('project-click')===false){
-            $($('.project')[$('.project').length-1]).toggleClass('project-click');
+        if($('.project').siblings().hasClass('project-click')){
+            let id = $('.project.project-click')[0].id;
+            let id_num = id.slice(-1);
+            let current = Number(id_num);
+            $('.project').siblings().removeClass('project-click');
+            let prev = current - 1;
+            $('#p' + prev).toggleClass('project-click');
         }
         else{
-            if($($('.project.project-click')[0]).prev().length ===1){
-                let current = $($('.project.project-click')[0]).prev()[0];
-                $(current).siblings().removeClass('project-click');
-                $(current).toggleClass('project-click');
-            }
-            else{
-                $('.project').siblings().removeClass('project-click');
-                $($('.project')[$('.project').length-1]).toggleClass('project-click');
-            }
+            $($('.project')[$('.project').length-1]).toggleClass('project-click');
         }
-    }) 
+    })
 })
