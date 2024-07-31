@@ -7,7 +7,12 @@ for (let i = 0; i < 18; i++) {
     cards.className = `project`;
     cards.id = `p_${i}`;
     let content =`
-    <a href="#">
+    <a href="#" class="project-link"></a>
+    <div class="project-image"></div>
+    <div class="project-content">
+        <h1 class="project-title">Project ${i}</h1>
+        <p>Project Description</p>
+    </div>
     `
     cards.innerHTML = content;
     project_container[0].appendChild(cards);
@@ -18,13 +23,14 @@ let total_length = total.length;
 let current = -1;
 
 $(document).ready(() => {
+    
     // on clicking project card
     $('.project').click((e)=>{
-        $(e.target).siblings().removeClass('project-click');
-        $(e.target).toggleClass('project-click');
+        $(e.target).closest('.project').siblings().removeClass('project-click');
+        $(e.target).closest('.project').toggleClass('project-click');
         current = $(e.target).index();
         setTimeout(() => {
-            (e.target).scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            (e.target).closest('.project').scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
           }, 150);
     })
 

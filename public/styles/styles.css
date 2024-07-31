@@ -8,10 +8,26 @@
     box-sizing: border-box;
 }
 
+/* body specifications  */
 body{
     margin: 0px;
     padding: 0px;
 }
+
+/* animation specification for bg */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* title specifications  */
 
 h1{
     font-size: 3rem;
@@ -20,11 +36,13 @@ h1{
     padding: 0;
 }
 
+/* section content specification */
 p{
     margin: 0;
     padding: 0;
 }
 
+/* window scroll bar specifications */
 body::-webkit-scrollbar-track {
     background: #202731;
 }
@@ -38,8 +56,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 
-/* navbar */
-
+/* navbar container*/
 header{
     border-bottom: 2px solid #F92C85;
     border-bottom-left-radius: 20px;
@@ -53,6 +70,8 @@ header{
     z-index: 1000;
 }
 
+/* navbar items container list */
+
 .navbar-nav {
     list-style-type: none; 
     padding: 0;             
@@ -62,6 +81,7 @@ header{
     justify-content: right;     
 }
 
+/* navbar items */
 .nav-item:first-child {
     margin-right: auto;
     font-family: "Edu AU VIC WA NT Hand", cursive;
@@ -76,6 +96,7 @@ header{
     transition: all 0.3s;
 }
 
+/* nabar items link  */
 .nav-link{
     display: block;
     width: 100%;
@@ -85,9 +106,12 @@ header{
     transition: all 0.3s;
 }
 
+/* navbar item links on hover */
 .link-hover{
     color: #FDF5DF;
 }
+
+/* navbar items on hover */
 
 .item-hover{
     background-color: #F92C85;
@@ -96,21 +120,6 @@ header{
 }
 
 /* footer */
-
-.icon-link{
-    text-decoration: none;
-}
-
-.footer-link{
-    text-decoration: none;
-    color: #5EBEC4;
-    padding: 0.5rem;
-    transition: all 0.3s;
-}
-
-.footer-hover{
-    color: #F92C85;
-}
 
 footer{
     border-top: 2px solid #F92C85;
@@ -121,43 +130,69 @@ footer{
     background-color: #202731;
 }
 
+/* footer container  */
+
 .foot{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* footer icons  */
+
 .icon-link{
     margin: 0.5rem;
     padding: 0.3rem;
+    text-decoration: none;
 }
+
+/* footer icons on hover */
 
 .hop {
     animation: hop 0.5s;
   }
 
-  @keyframes hop {
+@keyframes hop {
     0% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
     50% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  }
+}
 
-  .fg-primary{
+/* footer page links */
+
+.footer-link{
+    text-decoration: none;
+    color: #5EBEC4;
+    padding: 0.5rem;
+    transition: all 0.3s;
+}
+
+/* footer page links on hover */
+
+.footer-hover{
+    color: #F92C85;
+}
+
+/* footer icon specification */
+
+.fg-primary{
     fill: #5EBEC4;
     transition: all 0.2s;
     stroke: #F92C85;
     stroke-width: 7px;
-  }
+}
 
 /* pages */
 
-  .page{
+/* section specification */
+
+.page{
     min-height: 100vh;
     min-width:100wh;
     position: relative;
@@ -168,9 +203,11 @@ footer{
     padding-top: 7rem;
     align-items: center;
     justify-items: center;
-  }
+}
 
-/* title */
+/* title section*/
+
+/* first section specification */
 
 #first{
     color:black;
@@ -178,22 +215,29 @@ footer{
     cursor:none;
 }
 
-.blob-content {
+/* section title */
+
+.blob-title {
     position: relative;
     z-index: 1;
     margin-top: 2%;
 } 
 
+/* blob svg to apply filter*/
+
 .blob-wrapper svg {
     display: none;
-  }
+}
 
+/* blob container */
 
-  .blob-container {
+.blob-container {
     filter: url(#goo) blur(2px) ;
     width: 100wh;
     height: 100vh;
-  }
+}
+
+/* blob specification */
 
 .blob{
     
@@ -205,6 +249,8 @@ footer{
     filter: blur(25px);
     position: absolute;
 }
+
+/* individual blob specifications */
 
 .b1{
     animation: moveVertical 30s ease infinite;
@@ -223,6 +269,8 @@ footer{
 
 }
 
+/* blob cursor specification  */
+
 .interactive {
     height: 100px;
     width: 100px;
@@ -230,6 +278,8 @@ footer{
     margin-top: -15rem;
 
   }
+
+/* blob animation specifications */
 
 @keyframes moveHorizontal{
     0%{
@@ -279,7 +329,9 @@ footer{
     } 
 }
 
-/* about */
+/* about section*/
+
+/* second section specification  */
 
 #second{
     background: linear-gradient(90deg, #ff0095, #ff9400);
@@ -288,12 +340,16 @@ footer{
 
 }
 
-/* blog */
+/* blog section*/
+
+/* third section specification */
 
 #third{
     background-color: #010000;
 
 }
+
+/* blog container */
 
 .cards-container{
     display:flex;
@@ -302,6 +358,8 @@ footer{
     width: 70%;
     padding: 3rem;
 }
+
+/* blog container scroll bar specifications  */
 
 .cards-container::-webkit-scrollbar {
     width: 10px;
@@ -315,6 +373,8 @@ footer{
 .cards-container::-webkit-scrollbar-track {
     background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
 }
+
+/* blog card  */
 
 .cards{
     position:relative;
@@ -330,21 +390,29 @@ footer{
     transition: all 300ms ease;
 }
 
+/* blog cards ovrlap effect */
+
 .cards:not(:first-child){
     margin-left: -130px;
 }
+
+/* blog cards after, on hover */
 
 .cards-after{
     box-shadow:1rem 0 3rem #000;
     transform: translateX(130px);
 }
 
+/* blog card on hover */
+
 .cards-hover{
     transform:translateY(-1rem);
     border:2px solid #ff0095;
 }
 
-/* projects */
+/* projects section*/
+
+/* fourth section specification */
 
 #fourth{
     background: linear-gradient(90deg, #2c00ff, #7000ff);
@@ -352,18 +420,8 @@ footer{
     animation: gradient-animation 5s ease infinite;
     overflow-x: hidden;
 }
-  
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+
+ /* project container with navigation buttons */
 
 .totalproject{
     display: flex;
@@ -372,6 +430,8 @@ footer{
     padding: 3rem;
     width:100vw;
 }
+
+ /* project navigation buttons */
 
 .click{
     display: flex;
@@ -382,10 +442,14 @@ footer{
     color:#FFFFFF;
 }
 
+ /* navigation button on hover */
+
 .click-hover{
     background-color: #ff0095;
     box-shadow: 1px 1px 3px #000;
 }
+
+ /* project card container */
 
 .project-container{
     display: flex;
@@ -397,24 +461,32 @@ footer{
     padding-right: 250px;
 }
 
+  /* project card */
+
 .project{
     position: relative;
     margin: 1rem;
     display: flex;
+    flex-direction: column;
     height: 250px;
     width:50px;
     min-width: 50px;
     background-color: #000;
     border-radius: 20px;
     box-shadow: 1px 1px 3px #000;
-    transition: all 300ms ease;
+    transition: min-width 300ms ease;
+    color:transparent;
 
 }
 
+ /* project card on click */
 
 .project-click{
     min-width:350px;
+    color: white;
 }
+
+ /* project scroll bar specifications */
 
 .project-container::-webkit-scrollbar {
     width: 10px;
