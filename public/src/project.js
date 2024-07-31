@@ -7,16 +7,17 @@ for (let i = 0; i < 18; i++) {
     cards.className = `project`;
     cards.id = `p_${i}`;
     let content =`
-    <a href="#" class="project-link"></a>
     <div class="project-image"></div>
     <div class="project-content">
-        <h1 class="project-title">Project ${i}</h1>
-        <p>Project Description</p>
+        <h1>Project ${i}</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolorum sapiente eos ex dolore ipsam eaque, quisquam reiciendis molestias autem? Officiis vitae minus assumenda maxime aperiam ex voluptate nihil molestias!</p>
+        <a href="#" class="project-link">read more >></a>     
     </div>
     `
     cards.innerHTML = content;
     project_container[0].appendChild(cards);
 }
+
 
 let total = $('.project');
 let total_length = total.length;
