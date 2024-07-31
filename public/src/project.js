@@ -23,12 +23,12 @@ let total_length = total.length;
 let current = -1;
 
 $(document).ready(() => {
-    
+
     // on clicking project card
     $('.project').click((e)=>{
         $(e.target).closest('.project').siblings().removeClass('project-click');
         $(e.target).closest('.project').toggleClass('project-click');
-        current = $(e.target).index();
+        current = $(e.target).closest('.project').index();
         setTimeout(() => {
             (e.target).closest('.project').scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
           }, 150);
@@ -41,11 +41,12 @@ $(document).ready(() => {
 
     // on clicking next and prev navigation click
     $('.next').click((e)=>{
-        console.log(current);
+
         current += 1;
         if (current > total_length - 1) {
             current = 0;
         }
+
         let card = total.eq(current);
         card.siblings().removeClass('project-click');
         card.toggleClass('project-click');
@@ -56,11 +57,12 @@ $(document).ready(() => {
     })
 
     $('.prev').click((e)=>{
-        console.log(current);
+
         current -= 1;
         if (current < 0) {
             current = total_length - 1;
         }
+
         let card = total.eq(current);
         card.siblings().removeClass('project-click');
         card.toggleClass('project-click');

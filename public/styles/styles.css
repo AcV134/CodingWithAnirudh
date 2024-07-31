@@ -474,9 +474,8 @@ footer{
     background-color: #000;
     border-radius: 20px;
     box-shadow: 1px 1px 3px #000;
-    transition: min-width 300ms ease;
     color:transparent;
-
+    transition: min-width 500ms ease;
 }
 
  /* project card on click */
@@ -484,7 +483,11 @@ footer{
 .project-click{
     min-width:350px;
     color: white;
+    transition: min-width 500ms ease,color 1s ease-in;
+
 }
+
+
 
  /* project scroll bar specifications */
 
